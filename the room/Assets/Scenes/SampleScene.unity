@@ -372,7 +372,6 @@ MonoBehaviour:
   mainCamera: {fileID: 1841500197}
   vector: {x: 0, y: 0, z: 0}
   final_vector: {x: 0, y: 0, z: 0}
-  glass: {fileID: 254005945}
 --- !u!1 &254005945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1263481170301730600, guid: 849ef981216b0cd4186587a7c585fff1,
