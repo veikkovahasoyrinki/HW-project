@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: beb4e2871579447497fe41dfb108e2cd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170222
+  packageName: XRI Starter Kit
+  packageVersion: 1.5.230220
+  assetPath: Assets/XRI Starter Kit/Assets/XRI Starter Assets 2.3.0-pre.1/Starter
+    Assets/Prefabs/Teleport/Teleport Area.prefab
+  uploadId: 565036
