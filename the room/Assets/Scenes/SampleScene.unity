@@ -885,6 +885,56 @@ PrefabInstance:
       propertyPath: m_SelectActionTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[4]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[5]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[6]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[7]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[8]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446820933705538192, guid: 38d7150418d359a4c8be127e05aa7254,
+        type: 3}
+      propertyPath: 'staminaBlocks.Array.data[9]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5931180804625177577, guid: 38d7150418d359a4c8be127e05aa7254,
         type: 3}
       propertyPath: m_Name
@@ -945,6 +995,10 @@ PrefabInstance:
     - {fileID: 6100707055042254555, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
     - {fileID: 7618422823644265634, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
     - {fileID: 7297480520483398202, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
+    - {fileID: 2337512882940419994, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
+    - {fileID: 1367965566417960373, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
+    - {fileID: 9077103302888920632, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
+    - {fileID: 3976845878619900207, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d7150418d359a4c8be127e05aa7254, type: 3}
@@ -3204,9 +3258,9 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Complete.TankShooting, Assembly-CSharp
-        m_MethodName: FireWeapon
+      - m_Target: {fileID: 1368287651}
+        m_TargetAssemblyTypeName: LaunchProjectile, Assembly-CSharp
+        m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4051,6 +4105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff5a2d57f5ae1449667c082576b0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  launchPoint: {fileID: 2037522512}
+  projectile: {fileID: 7701269178329304847, guid: f1bb93b335ca9f9428a59659fa7bf81c,
+    type: 3}
+  launchVel: 10
 --- !u!1 &1469228125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,8 +5240,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4574405651562524, guid: 997eda0f844715845a30121b4553e2fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.515
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574405651562524, guid: 997eda0f844715845a30121b4553e2fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.577
+      value: 0.622
       objectReference: {fileID: 0}
     - target: {fileID: 23229273421519162, guid: 997eda0f844715845a30121b4553e2fd,
         type: 3}
@@ -5339,6 +5401,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003971094}
   m_Mesh: {fileID: -6313390774378946585, guid: a39b6d1af189d1f49a583af3af3d2ea9, type: 3}
+--- !u!4 &2037522512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4574405651562524, guid: 997eda0f844715845a30121b4553e2fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1974674946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2097963369
 GameObject:
   m_ObjectHideFlags: 0
