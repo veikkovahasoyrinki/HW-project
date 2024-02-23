@@ -9,12 +9,14 @@ public class TowerControlScript : MonoBehaviour
     private float turnSpeed = 100f;
     private float tiltSpeed = 90f;
     private Rigidbody towerRigidbody;
+    private GameObject cannonCopy;
     public GameObject cannon;
 
     // Start is called before the first frame update
     void Start()
     {
-         towerRigidbody = GetComponent<Rigidbody>();
+        towerRigidbody = GetComponent<Rigidbody>();
+        cannonCopy = new GameObject();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class TowerControlScript : MonoBehaviour
 
     private void Rotate()
     {
+        if (rotateValue < .1f && rotateValue > -.1f) return;
         float turn = rotateValue * turnSpeed * Time.deltaTime;
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         towerRigidbody.MoveRotation(towerRigidbody.rotation * turnRotation);
@@ -38,8 +41,17 @@ public class TowerControlScript : MonoBehaviour
 
     private void Tilt()
     {
-        float tilt = rotateValue * turnSpeed * Time.deltaTime;
+        if (tiltValue < .1f && tiltValue > -.1f) return;
+
+        float tilt = tiltValue * tiltSpeed * Time.deltaTime;
         Vector3 vector = new Vector3(tilt, 0, 0);
-        cannon.transform.Rotate(vector);
+
+        cannonCopy.transform.rotation = cannon.transform.rotation;
+        cannonCopy.transform.Rotate(vector);
+        Debug.Log("Proposed rotation" + cannonCopy.transform.rotation);
+        if (cannonCopy.transform.rotation.x > -0.40f && cannonCopy.transform.rotation.x < 0.40f)
+        { 
+            cannon.transform.Rotate(vector);
+        }
     }
 }
