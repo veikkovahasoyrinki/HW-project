@@ -32,7 +32,7 @@ public class TowerControlScript : MonoBehaviour
 
     private void Rotate()
     {
-        if (rotateValue < .1f && rotateValue > -.1f) return;
+        if (rotateValue < .2f && rotateValue > -.2f) return;
         float turn = rotateValue * turnSpeed * Time.deltaTime;
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         towerRigidbody.MoveRotation(towerRigidbody.rotation * turnRotation);
@@ -41,7 +41,7 @@ public class TowerControlScript : MonoBehaviour
 
     private void Tilt()
     {
-        if (tiltValue < .1f && tiltValue > -.1f) return;
+        if (tiltValue < .2f && tiltValue > -.2f) return;
 
         float tilt = tiltValue * tiltSpeed * Time.deltaTime;
         Vector3 vector = new Vector3(tilt, 0, 0);

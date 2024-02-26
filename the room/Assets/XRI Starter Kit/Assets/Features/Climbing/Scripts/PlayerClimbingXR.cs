@@ -85,9 +85,7 @@ namespace MikeNspired.UnityXRHandPoser
         {
             ClimbingStarted();
 
-            var stamina = controller.GetComponentInParent<HandReference>().Hand.GetComponent<ClimbingStamina>();
-            stamina.Activate();
-            stamina.OutOfStamina.AddListener(CancelClimbing);
+            
 
             prevLocation = xrOrigin.transform.position;
 
@@ -106,9 +104,7 @@ namespace MikeNspired.UnityXRHandPoser
 
         public void RemoveClimbHand(XRBaseController controller)
         {
-            var stamina = controller.GetComponentInChildren<ClimbingStamina>();
-            stamina.Deactivate();
-            stamina.OutOfStamina.RemoveListener(CancelClimbing);
+            
 
             if (climbingHand == controller)
             {
