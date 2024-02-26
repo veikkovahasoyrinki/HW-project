@@ -7,7 +7,7 @@ public class WaveSpawn : MonoBehaviour {
 	public float EnemyInterval;
 	public Transform spawnPoint;
 	public float startTime;
-	public Transform[] WayPoints;
+	public Transform WayPoints;
 	int enemyCount=0;
 
 	void Start ()

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SpawnScript : MonoBehaviour
 {
-
+    public GameObject target;
     public GameObject goblin;
+    public Transform spawnVector;
     public float spawnTime = 3f;
 
     // Use this for initialization
@@ -22,6 +23,7 @@ public class SpawnScript : MonoBehaviour
 
     void Spawn()
     {
-        var newGoblin = GameObject.Instantiate(goblin);
+        var newGoblin = GameObject.Instantiate(goblin, spawnVector.position, spawnVector.rotation);
+        newGoblin.GetComponent<Enemy>().point = target;
     }
 }
