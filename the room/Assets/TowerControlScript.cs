@@ -44,13 +44,14 @@ public class TowerControlScript : MonoBehaviour
         if (tiltValue < .2f && tiltValue > -.2f) return;
 
         float tilt = tiltValue * tiltSpeed * Time.deltaTime;
-        Vector3 vector = new Vector3(tilt, 0, 0);
+        Vector3 vector = new Vector3(0, 0, tilt);
 
         cannonCopy.transform.rotation = cannon.transform.rotation;
         cannonCopy.transform.Rotate(vector);
         Debug.Log("Proposed rotation" + cannonCopy.transform.rotation);
-        if (cannonCopy.transform.rotation.x > -0.40f && cannonCopy.transform.rotation.x < 0.40f)
-        { 
+        //cannon.transform.Rotate(vector);
+        if (cannonCopy.transform.rotation.z > -0.40f && cannonCopy.transform.rotation.z < 0.35f)
+        {
             cannon.transform.Rotate(vector);
         }
     }

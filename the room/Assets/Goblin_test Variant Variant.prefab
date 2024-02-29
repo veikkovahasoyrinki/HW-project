@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin_test Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3138440054541782599, guid: c249ef2e090fe0046a3285a0799a90a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

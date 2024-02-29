@@ -10,4 +10,14 @@ public class Projectile : MonoBehaviour
     {
         Destroy(gameObject, life);
     }
+
+    void OnTriggerEnter(Collider objectName)
+    {
+
+        if (objectName.name == "Goblin_test Variant Variant 1(Clone)")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
